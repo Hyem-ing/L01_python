@@ -73,3 +73,5 @@ print(id(a), id(b))
 
 b.append(4)
 print(a)
+
+print(f"a의 주소는 {id(a)}, b의 주소는 {id(b)}")
