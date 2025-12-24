@@ -229,3 +229,69 @@ for k in user.keys():
 # print(user[0])  # KeyError: 0
 # 순서가 유지되는 경향이 있다고 하여, 
 # 인덱스로 접근 가능한 것은 아님
+
+# 리스트 [] vs. 튜플 ()
+# 리스트 : 실수로 수정 가능
+point = [10,20,30]
+point[0] = 99 # 가능
+print(point)
+
+# 튜플 : 실수 방지 -> 이건 바뀌면 안된다는 신호
+# point = (10,20,30)
+# point[0] = 99 # 불가능
+
+# 리스트 [] vs. 집합 {}
+# 의문점 : 리스트를 그냥 사용하고, 중복만 없으면 되는거 아닌가요?
+
+# 리스트는 "데이터 보관"을 목적으로 한다.
+names = ['A','B','C','D','A','C']
+print(names)
+print(len(names))
+
+# 집합은 조건 판단 도구로 활용
+names_set = set(names)
+print(names_set)
+print(len(names_set))
+# => DAU 등
+
+# 리스트 [] vs. 딕셔너리 {key:value}
+# 리스트 : 순서를 알아야 의미가 있음
+user = ['jun',25,'개발자',True]
+print(user)
+
+# 딕셔너리 : 의미가 코드에 그대로 드러남
+user = {'name':'jun',
+        'age':25,
+        'occupation':'개발자',
+        'live_seoul':True}
+print(user)
+
+# 반복문 + 컨테이너
+# 리스트 반복
+numbers = [1,2,3,4,5]
+
+for variable in numbers:
+    print(variable)
+
+# 딕셔너리 반복
+user = {'name':'jun',
+        'age':25,
+        'occupation':'개발자',
+        'live_seoul':True}
+
+for variable in user: # key만 할당
+    print(variable)
+
+for k, v in user.items(): # 한쌍을 그대로 쓰기
+    print(k, v)
+    
+
+tags = {'python','data','bi','sql'}
+print(tags)
+tags.add('python')
+print(tags)
+
+for tag in tags:
+    print(tag) # 순서가 없기 때문에 무작위로 불러와 짐
+
+# => 같은 for문인데, 자료형에 따라 꺼내지는 단위가 달라진다!
