@@ -31,8 +31,11 @@ N = int(input('정수를 입력해 주세요 : '))
 # 함수 정의 (define)
 # 매개 변수 O, 반환값 X
 def print_stars(n):
-    for i in range(1,n + 1):
-        print('*' * i)
+    for i in range(1,n + 1): # 반복하여, 한줄씩 찍기
+        print('*' * i) # 별 n개를 출력하기 위해 문자열 "*" 곱하기 연산 
+        # i = 1 / "*" * 1 => "*" 
+        # i = 2 / "*" * 2 => "**"
+        # i = 3 / "*" * 3 => "***"
 
 print_stars(N)
 
