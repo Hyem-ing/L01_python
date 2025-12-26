@@ -8,4 +8,4 @@ data = [10, 20, None, 30, 40, None, 50]
 
 
 
-# print(total_sum) # 210 (평균이 30이므로 None 2개가 30으로 바뀌어 합계 180)
+# print(total_sum) # 210 (평균이 30이므로 None 2개가 30으로 바뀌어 합계 210)
